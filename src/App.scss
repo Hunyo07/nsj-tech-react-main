@@ -1,0 +1,147 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+// SCSS styling starts here
+
+$base-color: #c6538c;
+$bg-color: orange;
+$main-color-title: gray;
+$main-light-bg-color: #f0f0f0;
+// color-scheme: light;
+$nsj-body-fg-color: #464950;
+$nsj-body-bg-color: #fff;
+$nsj-white-bg-color: #fff;
+$nsj-black-bg-color: #070b18;
+$nsj-white-fg-color: #fff;
+$nsj-black-fg-color: #070b18;
+$nsj-light-bg-color: #f0f0f0;
+$nsj-dark-bg-color: #090e1e;
+$nsj-dark-color: #090e1e;
+$nsj-border-color: #dee2f3;
+$nsj-opaque-bd-color-1: rgba(0, 0, 0, 0.0675);
+$nsj-opaque-bd-color-2: rgba(0, 0, 0, 0.125);
+$nsj-opaque-bd-color-3: rgba(0, 0, 0, 0.1);
+$nsj-opaque-bd-color-4: rgba(0, 0, 0, 0.5);
+$nsj-btn-default-bg-color: #fff0e8;
+$nsj-input-bg-color: #fff0e8;
+$nsj-shimmer-color-1: #f5f5f5;
+$nsj-shimmer-color-2: #f0f0f0;
+
+@mixin animation-hover {
+  content: "";
+  background: rgb(255, 108, 30) !important;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 108, 30, 1) 0%,
+    rgba(216, 68, 4, 1) 100%
+  ) !important;
+  height: 3px;
+  width: 0;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  transition: ease 0.4s;
+}
+
+.App {
+  font-family: "Roboto", "Inter", sans-serif;
+  color: $nsj-body-fg-color;
+  background-color: $nsj-body-bg-color;
+  font-size: 14px;
+  font-weight: 500;
+
+  .nav-container {
+    background-color: $nsj-white-bg-color;
+
+    .nsj-nav-logo {
+      height: "3rem";
+      width: "auto";
+    }
+
+    .nav-title {
+      color: #ff6c1e;
+      font-weight: 700;
+      font-size: 1.5rem;
+      letter-spacing: 1px;
+    }
+    .nav-text-title {
+      font-weight: 500;
+      font-size: 20px;
+      letter-spacing: 1px;
+      color: rgb(51, 51, 51);
+    }
+  }
+
+  // .app-stack {
+  //   Button {
+  //     color: $base-color;
+  //     padding-bottom: 1.5rem;
+  //     padding-left: 0px;
+  //     padding-right: 0px;
+  //     display: inline;
+  //   }
+
+  //   Button:hover {
+  //     background-color: var($base-color);
+  //   }
+
+  //   Button::after {
+  //     @include animation-hover;
+  //   }
+
+  //   Button:hover::after {
+  //     width: 100%;
+  //     right: unset;
+  //     left: 0;
+  //   }
+  // }
+
+  // .main-title:hover {
+  //   background-color: $main-light-bg-color;
+  // }
+  // .main-title::after {
+  //   @include animation-hover;
+  // }
+
+  // .main-title:hover::after {
+  //   width: 100%;
+  //   right: unset;
+  //   left: 0;
+  // }
+}
